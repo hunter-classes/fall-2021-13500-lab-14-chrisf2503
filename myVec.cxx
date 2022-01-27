@@ -4,7 +4,6 @@
 template<class T>
 MyVector<T>::MyVector(){
   nums = new T[1];
-  nums[0] = 0;
   length = 0;
   capacitys = 0;
 }
@@ -79,7 +78,7 @@ template<class T>
 void MyVector<T>::pop_back(){
   length--;
   T *newList = new T[capacitys];
-  for(int i = 0; i < length-1; i++){
+  for(int i = 0; i < length; i++){
     newList[i] = nums[i];
   }
   //newList[length-1] = item;
